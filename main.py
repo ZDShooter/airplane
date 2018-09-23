@@ -13,6 +13,7 @@ def start(): # 定义一个 start 类
         screen.blit(background, (0, 0))
         hero_plane.display()
         enemy_plane.move()
+        enemy_plane.launch_bullet()
         enemy_plane.display()
         time.sleep(0.01)
         pygame.display.update()
@@ -29,6 +30,7 @@ def start(): # 定义一个 start 类
                     hero_plane.move_right()
                 if event.key == K_SPACE:
                     print("你按了空格")
+                    hero_plane.launch_bullet()
 
 if __name__ == '__main__':
     start()
